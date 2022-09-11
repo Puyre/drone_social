@@ -1,5 +1,5 @@
 import 'package:chopper/chopper.dart';
-import 'package:drone_assist/feature/auth/data/auth_api.dart';
+import 'package:drone_assist/feature/auth/data/api/auth_api.dart';
 import 'package:get_it/get_it.dart';
 
 void configureChopper() {

@@ -22,4 +22,11 @@ class _$AuthApi extends AuthApi {
     final $request = Request('POST', $url, client.baseUrl);
     return client.send<SignUpResponse, SignUpResponse>($request);
   }
+
+  @override
+  Future<Response<SignInResponse>> signIn(SignInRequest request) {
+    final $url = '/login';
+    final $request = Request('POST', $url, client.baseUrl);
+    return client.send<SignInResponse, SignInResponse>($request);
+  }
 }
