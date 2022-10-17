@@ -9,12 +9,12 @@ part 'auth_api.chopper.dart';
 
 @ChopperApi()
 abstract class AuthApi extends ChopperService {
+  static AuthApi create([ChopperClient? client]) => _$AuthApi(client);
 
-  static AuthApi create([ChopperClient? client]) =>
-      _$AuthApi(client);
-
-  @Post(path: "/signup")
-  Future<Response<SignUpResponse>> signUp(SignUpRequest request);
+  @Post(path: "/signup", headers: {'content-type': 'application/json'})
+  Future<Response> signUp(
+    @Body() Map<String, dynamic> body,
+  );
 
   @Post(path: "/login")
   Future<Response<SignInResponse>> signIn(SignInRequest request);

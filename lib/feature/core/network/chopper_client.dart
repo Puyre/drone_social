@@ -4,9 +4,13 @@ import 'package:get_it/get_it.dart';
 
 void configureChopper() {
   final chopper = ChopperClient(
-    baseUrl: "http://0.0.0.0:8080",
+    baseUrl: "http://10.0.2.2:8080",
     services: [
       AuthApi.create()
+    ],
+    converter: const JsonConverter(),
+    interceptors: [
+      HttpLoggingInterceptor(),
     ]
   );
 

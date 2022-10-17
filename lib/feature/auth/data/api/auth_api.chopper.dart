@@ -17,10 +17,16 @@ class _$AuthApi extends AuthApi {
   final definitionType = AuthApi;
 
   @override
-  Future<Response<SignUpResponse>> signUp(SignUpRequest request) {
+  Future<Response<dynamic>> signUp(Map<String, dynamic> body) {
     final $url = '/signup';
-    final $request = Request('POST', $url, client.baseUrl);
-    return client.send<SignUpResponse, SignUpResponse>($request);
+    final $headers = {
+      'content-type': 'application/json',
+    };
+
+    final $body = body;
+    final $request =
+        Request('POST', $url, client.baseUrl, body: $body, headers: $headers);
+    return client.send<dynamic, dynamic>($request);
   }
 
   @override
