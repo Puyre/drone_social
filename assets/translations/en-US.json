@@ -1,0 +1,16 @@
+{
+  "common": {
+    "appName": "Beer pong",
+    "networkError": "Network error"
+  },
+  "auth" : {
+    "email": "email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "errorWrongCredentials": "Incorrect email or password",
+    "errorUserAlreadyExists": "This email is already used by other user",
+    "errorEmptyLogin": "Email is empty",
+    "errorEmptyPassword": "Password is empty"
+  }
+}

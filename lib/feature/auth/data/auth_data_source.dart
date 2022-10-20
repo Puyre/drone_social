@@ -13,12 +13,14 @@ class AuthDataSource {
   });
 
   Future<SignUpResponse> signup(SignUpRequest signUpRequest) async {
-    final response = await authApi.signUp(signUpRequest);
-    return response.proceedResponse();
+    final response = await authApi.signUp(
+      signUpRequest.toJson()
+    );
+    return response.proceedResponse().body!;
   }
 
   Future<SignInResponse> signIn(SignInRequest signInRequest) async {
-    final response = await authApi.signIn(signInRequest);
-    return response.proceedResponse();
+    final response = await authApi.signIn(signInRequest.toJson());
+    return response.proceedResponse().body!;
   }
 }

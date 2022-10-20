@@ -1,0 +1,16 @@
+{
+  "common": {
+    "appName": "Beer pong",
+    "networkError": "Ошибка сети"
+  },
+  "auth" : {
+    "email": "email",
+    "password": "Пароль",
+    "signIn": "Авторизоваться",
+    "signUp": "Зарегестрироваться",
+    "errorWrongCredentials": "Неверный email или пароль",
+    "errorUserAlreadyExists": "Этот email уже используется другим пользователем",
+    "errorEmptyLogin": "Укажите email",
+    "errorEmptyPassword": "Укажите пароль"
+  }
+}
