@@ -1,9 +1,9 @@
 import 'dart:async';
 
+import 'package:drone_assist/core/exceptions/server_exception.dart';
 import 'package:drone_assist/feature/auth/bloc/auth_event.dart';
 import 'package:drone_assist/feature/auth/bloc/auth_state.dart';
 import 'package:drone_assist/feature/auth/data/auth_repository.dart';
-import 'package:drone_assist/feature/core/exceptions/server_exception.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {

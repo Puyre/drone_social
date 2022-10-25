@@ -1,9 +1,8 @@
 import 'dart:convert';
 
 import 'package:chopper/chopper.dart';
+import 'package:drone_assist/feature/auth/data/contract/sign_in_response.dart';
 import 'package:drone_assist/feature/auth/data/contract/sign_up_response.dart';
-
-import '../../auth/data/contract/sign_in_response.dart';
 
 final converters = {
   SignUpResponse: (json) => SignUpResponse.fromJson(json),
