@@ -4,7 +4,7 @@
     "networkError": "Network error"
   },
   "auth" : {
-    "email": "email",
+    "email": "Email",
     "password": "Password",
     "signIn": "Sign in",
     "signUp": "Sign up",

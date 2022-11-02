@@ -4,7 +4,7 @@
     "networkError": "Ошибка сети"
   },
   "auth" : {
-    "email": "email",
+    "email": "Email",
     "password": "Пароль",
     "signIn": "Авторизоваться",
     "signUp": "Зарегестрироваться",

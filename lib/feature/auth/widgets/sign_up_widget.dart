@@ -1,3 +1,4 @@
+import 'package:drone_assist/common/widgets/beer_text_field.dart';
 import 'package:drone_assist/extensions/context_extensions.dart';
 import 'package:drone_assist/feature/auth/bloc/auth_bloc.dart';
 import 'package:drone_assist/feature/auth/bloc/auth_event.dart';
@@ -60,11 +61,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
             child: Column(
               children: [
                 const Spacer(),
-                TextField(
-                  decoration: InputDecoration(
-                    border: const OutlineInputBorder(),
-                    hintText: LocaleKeys.auth_email.tr(),
-                  ),
+                BeerTextField(
+                  hint: LocaleKeys.auth_email.tr(),
                   onChanged: (text) {
                     login = text;
                   },
@@ -72,15 +70,12 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                 const SizedBox(
                   height: 16,
                 ),
-                TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    border: const OutlineInputBorder(),
-                    hintText: LocaleKeys.auth_password.tr(),
-                  ),
+                BeerTextField(
+                  hint: LocaleKeys.auth_password.tr(),
                   onChanged: (text) {
                     password = text;
                   },
+                  obscureText: true,
                 ),
                 const SizedBox(
                   height: 16,
@@ -94,7 +89,12 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                           ),
                         );
                   },
-                  child: Text(LocaleKeys.auth_signUp.tr()),
+                  child: Text(
+                    LocaleKeys.auth_signUp.tr(),
+                    style: const TextStyle(
+                      color: Colors.amber,
+                    ),
+                  ),
                 ),
                 const Spacer(
                   flex: 2,
