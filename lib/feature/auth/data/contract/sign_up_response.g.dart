@@ -8,10 +8,12 @@ part of 'sign_up_response.dart';
 
 SignUpResponse _$SignUpResponseFromJson(Map<String, dynamic> json) =>
     SignUpResponse(
-      json['token'] as String,
+      json['accessToken'] as String,
+      json['refreshToken'] as String,
     );
 
 Map<String, dynamic> _$SignUpResponseToJson(SignUpResponse instance) =>
     <String, dynamic>{
-      'token': instance.token,
+      'accessToken': instance.accessToken,
+      'refreshToken': instance.refreshToken,
     };

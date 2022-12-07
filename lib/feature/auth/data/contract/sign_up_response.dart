@@ -4,11 +4,13 @@ part 'sign_up_response.g.dart';
 
 @JsonSerializable()
 class SignUpResponse {
-  @JsonKey(name: 'token')
-  final String token;
+  final String accessToken;
+  final String refreshToken;
 
-  const SignUpResponse(this.token);
-
+  const SignUpResponse(
+    this.accessToken,
+    this.refreshToken,
+  );
 
   factory SignUpResponse.fromJson(final Map<String, dynamic> json) {
     return _$SignUpResponseFromJson(json);

@@ -17,29 +17,33 @@ class AuthRepository {
     String login,
     String password,
   ) async {
-    final token = (await authDataSource.signup(
+    final response = await authDataSource.signup(
       SignUpRequest(
         login,
         password,
       ),
-    ))
-        .token;
+    );
 
-    await tokenDataSource.setToken(token);
+    await tokenDataSource.setTokenPair(
+      accessToken: response.accessToken,
+      refreshToken: response.refreshToken,
+    );
   }
 
   Future<void> signIn(
     String login,
     String password,
   ) async {
-    final token = (await authDataSource.signIn(
+    final response = await authDataSource.signIn(
       SignInRequest(
         login,
         password,
       ),
-    ))
-        .token;
+    );
 
-    await tokenDataSource.setToken(token);
+    await tokenDataSource.setTokenPair(
+      accessToken: response.accessToken,
+      refreshToken: response.refreshToken,
+    );
   }
 }
